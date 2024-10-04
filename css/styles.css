@@ -588,13 +588,22 @@ img {
   letter-spacing: 0.02;
   text-align: center;
   color: #2e2f42;
+  padding-bottom: 16px;
 }
-.modal-form label {
+.form-part-label {
   font-size: 12px;
   font-weight: 400;
   line-height: 0.875;
   letter-spacing: 0.04;
   color: #8e8f99;
+  position: relative;
+  cursor: pointer; 
+  display: flex;
+  padding-bottom: 4px;
+}
+.form-part-label:focus-within{
+  color: #4d5ae5;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input {
   width: 350px;
@@ -603,10 +612,11 @@ img {
   outline: none;
   border-radius: 4px;
   border: 1px solid #2e2f4266;
-  padding-left: 22px;
+  padding-left: 25px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: border-color;
+ 
 }
 .form-input:focus {
   border-color: #4d5ae5;
@@ -619,7 +629,15 @@ img {
   width: 360px;
   height: 58px;
   position: relative;
-  padding-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  padding-left: 32px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
+  padding-top: 4px;
 }
 .form-input:hover {
   border-color: #4d5ae5;
@@ -627,9 +645,9 @@ img {
 }
 .name-icon {
   position: absolute;
-  left: 15px;
+  left: 40px;
   top: 22px;
-  --color2: black;
+  
 }
 .name-icon:hover {
   fill: #4d5ae5;
@@ -642,6 +660,7 @@ img {
   gap: 0px;
   border-radius: 4px;
   border: 1px solid #2e2f4266;
+  
 }
 .form-input-text:hover {
   border-color: #4d5ae5;
@@ -662,15 +681,23 @@ img {
   padding-left: 10px;
   padding-top: 8px;
 }
-.form-checkbox input {
+
+
+.checkbox-input{
   width: 16px;
   height: 16px;
   position: absolute;
-  left: 12px;
-  bottom: 190px;
+  left: 32px;
+  bottom:  170px;
   border: 1px, solid #2e2f4266;
   border-radius: 2px;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
+}
+.checkbox-input:checked{
+  outline: none;
 }
 .form-checkbox label {
   font-weight: 400;
@@ -679,8 +706,8 @@ img {
   letter-spacing: 4%;
   color: #757575;
   position: absolute;
-  bottom: 190px;
-  left: 40px;
+  bottom: 168px;
+  left: 60px;
 }
 .privacy-span {
   font-size: 12px;
